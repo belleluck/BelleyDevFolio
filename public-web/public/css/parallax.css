@@ -1,0 +1,116 @@
+.section-counter {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  padding: 4rem 0;
+  color: #fff;
+  z-index: 1;
+}
+
+.section-counter .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bs-primary);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.counter-box {
+  padding: 30px 20px;
+}
+
+.ico-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #ccc; /* grey border */
+  background-color: transparent; /* transparent background */
+  color: #ffffff; /* icon color */
+}
+
+.ico-circle svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Testimonial section */
+.section-testimonial {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  padding: 4rem 0;
+  color: #fff;
+  z-index: 1;
+}
+
+.section-testimonial .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bs-primary);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.testimonial-carousel.carousel-inner {
+  background-color: transparent;
+}
+
+.testimonial-carousel .carousel-item {
+  padding: 1rem 0;
+  background-color: transparent;
+}
+
+.testimonial-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.6rem auto;
+}
+.testimonial-carousel h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1.3rem;
+  text-transform: uppercase;
+}
+.testimonial-carousel .testimonial-text {
+  font-size: 1.25rem;
+  margin-bottom: 1.3rem;
+}
+
+.testimonial-carousel .btn-sm {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  margin-bottom: 1rem; /* Added space below button */
+}
+
+.section-testimonial .carousel-indicators.custom-indicators {
+  position: relative; /* Reset from Bootstrap's absolute */
+  margin-top: 2rem; /* Increased space from LinkedIn button */
+  justify-content: center; /* Center align */
+}
+
+.section-testimonial .carousel-indicators.custom-indicators button {
+  width: 24px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+  opacity: 0.5;
+  border: none;
+  margin: 0 4px;
+}
+
+.section-testimonial .carousel-indicators.custom-indicators .active {
+  opacity: 1;
+  background-color: #000;
+}

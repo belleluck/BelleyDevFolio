@@ -1,0 +1,14 @@
+# public-web
+public-web/node_modules/
+public-web/.env
+
+# backend-api
+backend-api/node_modules/
+backend-api/.env
+
+# admin-console
+admin-console/node_modules/
+admin-console/.env
+
+dist/
+build/

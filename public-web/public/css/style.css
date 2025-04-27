@@ -1,0 +1,35 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background-color: var(--bs-dark); /* Bootstrap's bg-dark */
+  color: white;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: var(--bs-success);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-size: 2rem;
+}
+
+#backToTop svg {
+  width: 2rem; /* Adjust size */
+  height: 2rem;
+}

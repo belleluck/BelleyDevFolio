@@ -1,0 +1,142 @@
+/* Portfolio Cards */
+.portfolio-card {
+  cursor: pointer;
+  border-radius: 8px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-img-wrapper {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal-dialog.modal-xl {
+  max-width: 75vw;
+  max-height: 90vh;
+  width: 75vw;
+  /* height: auto; */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border-radius: 0;
+}
+
+.modal-body {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  max-height: calc(75vw * 0.75);
+  height: auto;
+}
+
+@media (min-width: 1350px) {
+  .modal-dialog.modal-xl {
+    width: auto;
+    /* max-width: none; */
+    max-width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: auto;
+    max-width: calc(90vh * (4 / 3));
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-body {
+    /* max-height: 90vh;
+    max-width: calc(90vh * (4 / 3));  */
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+#work .carousel-inner,
+#work .carousel-item,
+#work .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  background-color: #000;
+}
+
+#work .carousel-item {
+  display: none;
+  transition: transform 0.6s ease-in-out;
+}
+
+#work .carousel-item.active {
+  display: block;
+}
+
+.modal-header,
+.modal-footer {
+  flex-shrink: 0;
+  padding: 1rem;
+}
+
+#portfolioModalCaption p {
+  margin: 0;
+}
+
+/* Card Body Styles */
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.work-subtitle {
+  margin-bottom: 0;
+  font-size: 0.875em;
+}

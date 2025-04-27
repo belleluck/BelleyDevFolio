@@ -1,0 +1,40 @@
+
+// old method
+@import "bootstrap/scss/functions";
+
+// Your color overrides
+$primary: #C45A5A;
+$secondary: #FADFA1;
+$success: #7EACB5;
+$light: #FFF4EA;
+$dark: #3A3535;
+$custom-colors: (
+  "tertiary": #7EACB5
+);
+
+// Merge theme colors
+@import "bootstrap/scss/variables";
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrap/scss/bootstrap";
+
+
+// // new method
+// @use "sass:map";
+// @use "bootstrap/scss/functions"; // functions must come before variables
+// @use "bootstrap/scss/mixins"; // required for some mixins in variables
+// @use "bootstrap/scss/variables" with (
+//   $theme-colors: map.merge(
+//     (
+//       "primary": #C45A5A,
+//       "secondary": #FADFA1,
+//       "success": #7EACB5,
+//       "light": #FFF4EA,
+//       "dark": #3A3535,
+//       "tertiary": #7EACB5
+//     ),
+//     ()
+//   )
+// );
+// // Now load Bootstrap, exposing all classes and mixins
+// @use "bootstrap/scss/bootstrap" as *;

@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.11.3",
+    "sweetalert2": "^11.19.1"
+  },
+  "name": "public-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.86.3"
+  },
+  "scripts": {
+    "build:sass": "sass --load-path=node_modules src/scss/custom-bootstrap.scss public/css/custom-bootstrap.css",
+    "watch:sass": "sass --watch --load-path=node_modules src/scss/custom-bootstrap.scss:public/css/custom-bootstrap.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
