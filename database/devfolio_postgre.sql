@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-04-29 17:41:56 +08
+-- Started on 2025-04-29 18:33:17 +08
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -533,7 +533,7 @@ ALTER TABLE ONLY public.testimonials ALTER COLUMN id SET DEFAULT nextval('public
 --
 
 COPY public.author (id, name, title, email, phone1, phone2, profile_image, profile_background_image, last_modify_date, data_created_date, social_links) FROM stdin;
-1	Belleluck Low	Full Stack Developer	belleluck1212@gmail.com	(60) 16-721-3758	(65) 8449-2006	../public/img/personal-profile/belleluck_closecap.png	../public/img/personal-profile/belleluck_flowers.png	2025-04-28 18:27:01.437898	2025-04-28 18:27:01.437898	{"linkedin": "https://www.linkedin.com/in/belleluck-low/"}
+1	Belleluck Low	Full Stack Developer	belleluck1212@gmail.com	(60) 16-721-3758	(65) 8449-2006	public/img/personal-profile/belleluck_closecap.png	public/img/personal-profile/belleluck_flowers.png	2025-04-28 18:27:01.437898	2025-04-28 18:27:01.437898	{"linkedin": "https://www.linkedin.com/in/belleluck-low/"}
 \.
 
 
@@ -597,12 +597,12 @@ COPY public.portfolio_images (image_id, portfolio_id, image_path) FROM stdin;
 --
 
 COPY public.portfolios (portfolio_id, title, category, date, description, cover_image, created_at) FROM stdin;
-1	Management App	App Development	2023-06-01 00:00:00	Management app design for various usage	../public/img/portfolios/fam-app.png	2025-04-27 17:54:57.809761
-2	Rating App	App Development	2023-06-01 00:00:00	Public toilet rating system	../public/img/portfolios/rfs-app.png	2025-04-27 17:54:57.809761
-3	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	../public/img/portfolios/sata-public-app.png	2025-04-27 17:54:57.809761
-4	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	../public/img/portfolios/sata-mwcare-app.png	2025-04-27 17:54:57.809761
-5	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	../public/img/portfolios/eha-app.png	2025-04-27 17:54:57.809761
-6	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	../public/img/portfolios/ha-app.png	2025-04-27 17:54:57.809761
+1	Management App	App Development	2023-06-01 00:00:00	Management app design for various usage	public/img/portfolios/fam-app.png	2025-04-27 17:54:57.809761
+2	Rating App	App Development	2023-06-01 00:00:00	Public toilet rating system	public/img/portfolios/rfs-app.png	2025-04-27 17:54:57.809761
+3	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/sata-public-app.png	2025-04-27 17:54:57.809761
+4	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/sata-mwcare-app.png	2025-04-27 17:54:57.809761
+5	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/eha-app.png	2025-04-27 17:54:57.809761
+6	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/ha-app.png	2025-04-27 17:54:57.809761
 \.
 
 
@@ -658,9 +658,9 @@ COPY public.skills (skill_id, skill_title, skill_description, last_update, creat
 --
 
 COPY public.testimonials (id, profile_photo, name, occupation, company, review, linkedin, last_modify_date, data_created_date) FROM stdin;
-1	../public/img/testimonial/teantze.jpeg	Tean Tze	Application Developer	Assurance Technology	Responsible and friendly senior, outstanding projects partner.	https://www.linkedin.com/in/tean-tze-ng-6767bb224/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
-2	../public/img/testimonial/songjie.jpeg	Song Jie	Application Consultant	Infinergy System	A leader who actually care about his teammates.	https://www.linkedin.com/in/yeow-song-jie-3140a5217/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
-3	../public/img/testimonial/jefferson.jpeg	Jefferson	Modern Workspace Developer	SRKK	Fast learner and an excellent developer.	https://www.linkedin.com/in/jefferson-mendoza-030b63bb/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
+1	public/img/testimonial/teantze.jpeg	Tean Tze	Application Developer	Assurance Technology	Responsible and friendly senior, outstanding projects partner.	https://www.linkedin.com/in/tean-tze-ng-6767bb224/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
+2	public/img/testimonial/songjie.jpeg	Song Jie	Application Consultant	Infinergy System	A leader who actually care about his teammates.	https://www.linkedin.com/in/yeow-song-jie-3140a5217/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
+3	public/img/testimonial/jefferson.jpeg	Jefferson	Modern Workspace Developer	SRKK	Fast learner and an excellent developer.	https://www.linkedin.com/in/jefferson-mendoza-030b63bb/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
 \.
 
 
@@ -853,7 +853,7 @@ ALTER TABLE ONLY public.portfolio_images
     ADD CONSTRAINT portfolio_images_portfolio_id_fkey FOREIGN KEY (portfolio_id) REFERENCES public.portfolios(portfolio_id) ON DELETE CASCADE;
 
 
--- Completed on 2025-04-29 17:41:56 +08
+-- Completed on 2025-04-29 18:33:17 +08
 
 --
 -- PostgreSQL database dump complete

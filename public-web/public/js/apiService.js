@@ -119,19 +119,19 @@ function fetchAuthor() {
     contactInfoList.innerHTML = `
     <li>
       <svg class="bi icon-small-info" width="0.9em" height="0.9em" fill="currentColor">
-        <use xlink:href="../public/icons/bootstrap-icons.svg#telephone-fill" />
+        <use xlink:href="public/icons/bootstrap-icons.svg#telephone-fill" />
       </svg>
       ${data.authorPhone1}
     </li>
     <li>
       <svg class="bi icon-small-info" width="0.9em" height="0.9em" fill="currentColor">
-        <use xlink:href="../public/icons/bootstrap-icons.svg#telephone-fill" />
+        <use xlink:href="public/icons/bootstrap-icons.svg#telephone-fill" />
       </svg>
       ${data.authorPhone2}
     </li>
     <li>
       <svg class="bi icon-small-info" width="0.9em" height="0.9em" fill="currentColor">
-        <use xlink:href="../public/icons/bootstrap-icons.svg#envelope" />
+        <use xlink:href="public/icons/bootstrap-icons.svg#envelope" />
       </svg>
       ${data.authorEmail}
     </li>
@@ -149,7 +149,7 @@ function fetchAuthor() {
             <div class="icon-contact-wrapper me-3 mb-3" >
               <a href="${url}" target="_blank">
                 <svg class="bi icon-contact" width="0.7em" height="0.7em" fill="currentColor">
-                  <use xlink:href="../public/icons/bootstrap-icons.svg#linkedin" />
+                  <use xlink:href="public/icons/bootstrap-icons.svg#linkedin" />
                 </svg>
               </a>
             </div>
@@ -333,7 +333,7 @@ function fetchSkills() {
             <div class="card text-center border-0 shadow-sm p-4">
               <div class="icon-wrapper mx-auto mb-3">
                 <svg class="bi icon" width="1em" height="1em" fill="currentColor">
-                  <use xlink:href="../public/icons/bootstrap-icons.svg#${item.skillIcon}" />
+                  <use xlink:href="public/icons/bootstrap-icons.svg#${item.skillIcon}" />
                 </svg>
               </div>
               <h5 class="fw-bold">${item.skillTitle}</h5>
@@ -378,7 +378,7 @@ function fetchCounterStat() {
               <div class="counter-ico mb-2">
                 <div class="ico-circle">
                   <svg class="bi" width="1em" height="1em" fill="currentColor">
-                    <use xlink:href="../public/icons/bootstrap-icons.svg#${item.iconName}" />
+                    <use xlink:href="public/icons/bootstrap-icons.svg#${item.iconName}" />
                   </svg>
                 </div>
               </div>
@@ -486,7 +486,7 @@ function fetchPortfolio() {
                   <span class="text-muted">/ ${item.date}</span>
                 </p>
                 <svg class="bi" width="20" height="20" fill="currentColor">
-                  <use xlink:href="../public/icons/bootstrap-icons.svg#chevron-right" />
+                  <use xlink:href="public/icons/bootstrap-icons.svg#chevron-right" />
                 </svg>
               </div>
             </div>
