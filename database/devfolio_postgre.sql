@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-04-29 18:33:17 +08
+-- Started on 2025-04-30 00:27:52 +08
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -532,9 +532,7 @@ ALTER TABLE ONLY public.testimonials ALTER COLUMN id SET DEFAULT nextval('public
 -- Data for Name: author; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.author (id, name, title, email, phone1, phone2, profile_image, profile_background_image, last_modify_date, data_created_date, social_links) FROM stdin;
-1	Belleluck Low	Full Stack Developer	belleluck1212@gmail.com	(60) 16-721-3758	(65) 8449-2006	public/img/personal-profile/belleluck_closecap.png	public/img/personal-profile/belleluck_flowers.png	2025-04-28 18:27:01.437898	2025-04-28 18:27:01.437898	{"linkedin": "https://www.linkedin.com/in/belleluck-low/"}
-\.
+INSERT INTO public.author VALUES (1, 'Belleluck Low', 'Full Stack Developer', 'belleluck1212@gmail.com', '(60) 16-721-3758', '(65) 8449-2006', 'public/img/personal-profile/belleluck_closecap.png', 'public/img/personal-profile/belleluck_flowers.png', '2025-04-28 18:27:01.437898', '2025-04-28 18:27:01.437898', '{"linkedin": "https://www.linkedin.com/in/belleluck-low/"}');
 
 
 --
@@ -543,13 +541,11 @@ COPY public.author (id, name, title, email, phone1, phone2, profile_image, profi
 -- Data for Name: contact_messages; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.contact_messages (contact_id, contact_name, contact_email, contact_subject, contact_message, created_datetime) FROM stdin;
-1	test name	test@gmail.com	test subject	test message	2025-04-26 17:06:11.664406
-2	Hello Baby Name	Baby1234@gmail.com	Hello Baby Subject	Hello Baby Message	2025-04-27 00:50:08.475701
-3	Test Name	test@gmail.com	Test Subject	Message Test	2025-04-27 00:51:56.444492
-4	test name	testemail@gmail.com	test subject	test message 1234	2025-04-27 00:56:04.250207
-5	Zwe Htet Aung	ZweZwe@gmail.com	Impressive Porfile	I saw your devfolio, impressive!!	2025-04-27 01:12:37.812719
-\.
+INSERT INTO public.contact_messages VALUES (1, 'test name', 'test@gmail.com', 'test subject', 'test message', '2025-04-26 17:06:11.664406');
+INSERT INTO public.contact_messages VALUES (2, 'Hello Baby Name', 'Baby1234@gmail.com', 'Hello Baby Subject', 'Hello Baby Message', '2025-04-27 00:50:08.475701');
+INSERT INTO public.contact_messages VALUES (3, 'Test Name', 'test@gmail.com', 'Test Subject', 'Message Test', '2025-04-27 00:51:56.444492');
+INSERT INTO public.contact_messages VALUES (4, 'test name', 'testemail@gmail.com', 'test subject', 'test message 1234', '2025-04-27 00:56:04.250207');
+INSERT INTO public.contact_messages VALUES (5, 'Zwe Htet Aung', 'ZweZwe@gmail.com', 'Impressive Porfile', 'I saw your devfolio, impressive!!', '2025-04-27 01:12:37.812719');
 
 
 --
@@ -558,12 +554,10 @@ COPY public.contact_messages (contact_id, contact_name, contact_email, contact_s
 -- Data for Name: highlight_skills; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.highlight_skills (id, title, proficiency, last_modify_date, data_created_date) FROM stdin;
-1	iOS Swift	80	2025-04-29 13:06:42.911941	2025-04-29 13:06:42.911941
-2	Java for Android	75	2025-04-29 13:06:42.911941	2025-04-29 13:06:42.911941
-3	Node.js	50	2025-04-29 13:06:42.911941	2025-04-29 13:06:42.911941
-4	JavaScript	70	2025-04-29 13:06:42.911941	2025-04-29 13:06:42.911941
-\.
+INSERT INTO public.highlight_skills VALUES (1, 'iOS Swift', 80, '2025-04-29 13:06:42.911941', '2025-04-29 13:06:42.911941');
+INSERT INTO public.highlight_skills VALUES (2, 'Java for Android', 75, '2025-04-29 13:06:42.911941', '2025-04-29 13:06:42.911941');
+INSERT INTO public.highlight_skills VALUES (3, 'Node.js', 50, '2025-04-29 13:06:42.911941', '2025-04-29 13:06:42.911941');
+INSERT INTO public.highlight_skills VALUES (4, 'JavaScript', 70, '2025-04-29 13:06:42.911941', '2025-04-29 13:06:42.911941');
 
 
 --
@@ -572,12 +566,10 @@ COPY public.highlight_skills (id, title, proficiency, last_modify_date, data_cre
 -- Data for Name: highlight_statistics; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.highlight_statistics (id, title, value, unit, last_modify_date, data_created_date, icon_name) FROM stdin;
-1	PROJECTS COMPLETED	15.00	number	2025-04-29 13:34:26.653807	2025-04-29 13:34:26.653807	briefcase-fill
-2	YEARS OF EXPERIENCE	3.00	number	2025-04-29 13:34:26.653807	2025-04-29 13:34:26.653807	calendar2-week-fill
-3	INCREASED PERFORMANCE	20.00	percent	2025-04-29 13:34:26.653807	2025-04-29 13:34:26.653807	graph-up
-4	INCREASED CONVERSION	10.00	percent	2025-04-29 13:34:26.653807	2025-04-29 13:34:26.653807	people-fill
-\.
+INSERT INTO public.highlight_statistics VALUES (1, 'PROJECTS COMPLETED', 15.00, 'number', '2025-04-29 13:34:26.653807', '2025-04-29 13:34:26.653807', 'briefcase-fill');
+INSERT INTO public.highlight_statistics VALUES (2, 'YEARS OF EXPERIENCE', 3.00, 'number', '2025-04-29 13:34:26.653807', '2025-04-29 13:34:26.653807', 'calendar2-week-fill');
+INSERT INTO public.highlight_statistics VALUES (3, 'INCREASED PERFORMANCE', 20.00, 'percent', '2025-04-29 13:34:26.653807', '2025-04-29 13:34:26.653807', 'graph-up');
+INSERT INTO public.highlight_statistics VALUES (4, 'INCREASED CONVERSION', 10.00, 'percent', '2025-04-29 13:34:26.653807', '2025-04-29 13:34:26.653807', 'people-fill');
 
 
 --
@@ -586,8 +578,6 @@ COPY public.highlight_statistics (id, title, value, unit, last_modify_date, data
 -- Data for Name: portfolio_images; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.portfolio_images (image_id, portfolio_id, image_path) FROM stdin;
-\.
 
 
 --
@@ -596,14 +586,12 @@ COPY public.portfolio_images (image_id, portfolio_id, image_path) FROM stdin;
 -- Data for Name: portfolios; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.portfolios (portfolio_id, title, category, date, description, cover_image, created_at) FROM stdin;
-1	Management App	App Development	2023-06-01 00:00:00	Management app design for various usage	public/img/portfolios/fam-app.png	2025-04-27 17:54:57.809761
-2	Rating App	App Development	2023-06-01 00:00:00	Public toilet rating system	public/img/portfolios/rfs-app.png	2025-04-27 17:54:57.809761
-3	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/sata-public-app.png	2025-04-27 17:54:57.809761
-4	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/sata-mwcare-app.png	2025-04-27 17:54:57.809761
-5	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/eha-app.png	2025-04-27 17:54:57.809761
-6	Healthcare App	App Development	2024-06-01 00:00:00	Local clinic teleconsult app for public user	public/img/portfolios/ha-app.png	2025-04-27 17:54:57.809761
-\.
+INSERT INTO public.portfolios VALUES (1, 'Management App', 'App Development', '2023-06-01 00:00:00', 'Management app design for various usage', 'public/img/portfolios/fam-app.png', '2025-04-27 17:54:57.809761');
+INSERT INTO public.portfolios VALUES (2, 'Rating App', 'App Development', '2023-06-01 00:00:00', 'Public toilet rating system', 'public/img/portfolios/rfs-app.png', '2025-04-27 17:54:57.809761');
+INSERT INTO public.portfolios VALUES (3, 'Healthcare App', 'App Development', '2024-06-01 00:00:00', 'Local clinic teleconsult app for public user', 'public/img/portfolios/sata-public-app.png', '2025-04-27 17:54:57.809761');
+INSERT INTO public.portfolios VALUES (4, 'Healthcare App', 'App Development', '2024-06-01 00:00:00', 'Local clinic teleconsult app for public user', 'public/img/portfolios/sata-mwcare-app.png', '2025-04-27 17:54:57.809761');
+INSERT INTO public.portfolios VALUES (5, 'Healthcare App', 'App Development', '2024-06-01 00:00:00', 'Local clinic teleconsult app for public user', 'public/img/portfolios/eha-app.png', '2025-04-27 17:54:57.809761');
+INSERT INTO public.portfolios VALUES (6, 'Healthcare App', 'App Development', '2024-06-01 00:00:00', 'Local clinic teleconsult app for public user', 'public/img/portfolios/ha-app.png', '2025-04-27 17:54:57.809761');
 
 
 --
@@ -612,11 +600,9 @@ COPY public.portfolios (portfolio_id, title, category, date, description, cover_
 -- Data for Name: projects; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.projects (id, title) FROM stdin;
-1	React Portfolio
-2	Weather App
-3	Expense Tracker
-\.
+INSERT INTO public.projects VALUES (1, 'React Portfolio');
+INSERT INTO public.projects VALUES (2, 'Weather App');
+INSERT INTO public.projects VALUES (3, 'Expense Tracker');
 
 
 --
@@ -625,14 +611,12 @@ COPY public.projects (id, title) FROM stdin;
 -- Data for Name: sections; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.sections (section_id, section_name, section_headline, section_description, last_update, created_datetime, is_display) FROM stdin;
-1	hero	I am Belleluck Low	Application Developer,Web Developer,Frontend Developer,Graphic Designer,Data Analyst	2025-04-28 13:22:22.117589	2025-04-28 13:22:22.117589	t
-6	send message	Send Message Us		2025-04-28 13:22:22.117589	2025-04-28 13:22:22.117589	t
-2	about me	About Me	Application Developer with strong experience in mobile app development, backend integration, and database management.<br><br>Proficient in Swift, Java, Flutter, and C# ASP.NET, with a proven track record of developing stable and user-centric iOS and Android applications.<br><br>Skilled in API optimization, SQL database troubleshooting, and version control using Git.<br><br>Dedicated to delivering clean, maintainable code and contributing to high-quality software solutions.<br><br>Keen interest in emerging technologies, particularly in FinTech and RegTech, with a focus on continuous learning and innovation.	2025-04-28 13:22:22.117589	2025-04-28 13:22:22.117589	t
-4	portfolio	Portfolio	Bringing Ideas to Life	2025-04-28 13:22:22.117589	2025-04-28 13:22:22.117589	t
-3	skills	Skills	Core Competencies and Expertise	2025-04-28 13:22:22.117589	2025-04-28 13:22:22.117589	t
-5	contact	Get in Touch	Let's Get in Touch	2025-04-28 13:22:22.117589	2025-04-28 13:22:22.117589	t
-\.
+INSERT INTO public.sections VALUES (1, 'hero', 'I am Belleluck Low', 'Application Developer,Web Developer,Frontend Developer,Graphic Designer,Data Analyst', '2025-04-28 13:22:22.117589', '2025-04-28 13:22:22.117589', true);
+INSERT INTO public.sections VALUES (6, 'send message', 'Send Message Us', '', '2025-04-28 13:22:22.117589', '2025-04-28 13:22:22.117589', true);
+INSERT INTO public.sections VALUES (2, 'about me', 'About Me', 'Application Developer with strong experience in mobile app development, backend integration, and database management.<br><br>Proficient in Swift, Java, Flutter, and C# ASP.NET, with a proven track record of developing stable and user-centric iOS and Android applications.<br><br>Skilled in API optimization, SQL database troubleshooting, and version control using Git.<br><br>Dedicated to delivering clean, maintainable code and contributing to high-quality software solutions.<br><br>Keen interest in emerging technologies, particularly in FinTech and RegTech, with a focus on continuous learning and innovation.', '2025-04-28 13:22:22.117589', '2025-04-28 13:22:22.117589', true);
+INSERT INTO public.sections VALUES (4, 'portfolio', 'Portfolio', 'Bringing Ideas to Life', '2025-04-28 13:22:22.117589', '2025-04-28 13:22:22.117589', true);
+INSERT INTO public.sections VALUES (3, 'skills', 'Skills', 'Core Competencies and Expertise', '2025-04-28 13:22:22.117589', '2025-04-28 13:22:22.117589', true);
+INSERT INTO public.sections VALUES (5, 'contact', 'Get in Touch', 'Let''s Get in Touch', '2025-04-28 13:22:22.117589', '2025-04-28 13:22:22.117589', true);
 
 
 --
@@ -641,14 +625,12 @@ COPY public.sections (section_id, section_name, section_headline, section_descri
 -- Data for Name: skills; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.skills (skill_id, skill_title, skill_description, last_update, created_datetime, skill_icon) FROM stdin;
-1	Mobile App Development	Experienced in developing stable iOS and Android apps using Swift, Kotlin, Java, and Flutter (Dart), focusing on performance and UI/UX.	2025-04-28 17:01:33.082146	2025-04-28 17:01:33.082146	phone
-2	Web Development	Proficient in HTML, CSS, Bootstrap, JavaScript, and jQuery for building responsive interfaces and integrating backend systems via XML.	2025-04-28 17:01:33.082146	2025-04-28 17:01:33.082146	browser-chrome
-3	UI/UX Development	Skilled in designing intuitive user experiences using Figma, Adobe Photoshop, and Illustrator, with attention to detail and usability.	2025-04-28 17:01:33.082146	2025-04-28 17:01:33.082146	brush
-4	API Development	Maintained and tested RESTful APIs with C# ASP.NET, using Postman for validation, ensuring seamless mobile-backend integration.	2025-04-28 17:01:33.082146	2025-04-28 17:01:33.082146	gear
-5	Database Management	Troubleshot and optimized Microsoft SQL and MySQL databases, including stored procedures, for efficient data handling in applications.	2025-04-28 17:01:33.082146	2025-04-28 17:01:33.082146	database-fill-gear
-6	Data Analysis	Knowledge of Python for data analysis, enhancing decision-making through structured data insights and trend identification.	2025-04-28 17:01:33.082146	2025-04-28 17:01:33.082146	bar-chart
-\.
+INSERT INTO public.skills VALUES (1, 'Mobile App Development', 'Experienced in developing stable iOS and Android apps using Swift, Kotlin, Java, and Flutter (Dart), focusing on performance and UI/UX.', '2025-04-28 17:01:33.082146', '2025-04-28 17:01:33.082146', 'phone');
+INSERT INTO public.skills VALUES (2, 'Web Development', 'Proficient in HTML, CSS, Bootstrap, JavaScript, and jQuery for building responsive interfaces and integrating backend systems via XML.', '2025-04-28 17:01:33.082146', '2025-04-28 17:01:33.082146', 'browser-chrome');
+INSERT INTO public.skills VALUES (3, 'UI/UX Development', 'Skilled in designing intuitive user experiences using Figma, Adobe Photoshop, and Illustrator, with attention to detail and usability.', '2025-04-28 17:01:33.082146', '2025-04-28 17:01:33.082146', 'brush');
+INSERT INTO public.skills VALUES (4, 'API Development', 'Maintained and tested RESTful APIs with C# ASP.NET, using Postman for validation, ensuring seamless mobile-backend integration.', '2025-04-28 17:01:33.082146', '2025-04-28 17:01:33.082146', 'gear');
+INSERT INTO public.skills VALUES (5, 'Database Management', 'Troubleshot and optimized Microsoft SQL and MySQL databases, including stored procedures, for efficient data handling in applications.', '2025-04-28 17:01:33.082146', '2025-04-28 17:01:33.082146', 'database-fill-gear');
+INSERT INTO public.skills VALUES (6, 'Data Analysis', 'Knowledge of Python for data analysis, enhancing decision-making through structured data insights and trend identification.', '2025-04-28 17:01:33.082146', '2025-04-28 17:01:33.082146', 'bar-chart');
 
 
 --
@@ -657,11 +639,9 @@ COPY public.skills (skill_id, skill_title, skill_description, last_update, creat
 -- Data for Name: testimonials; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.testimonials (id, profile_photo, name, occupation, company, review, linkedin, last_modify_date, data_created_date) FROM stdin;
-1	public/img/testimonial/teantze.jpeg	Tean Tze	Application Developer	Assurance Technology	Responsible and friendly senior, outstanding projects partner.	https://www.linkedin.com/in/tean-tze-ng-6767bb224/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
-2	public/img/testimonial/songjie.jpeg	Song Jie	Application Consultant	Infinergy System	A leader who actually care about his teammates.	https://www.linkedin.com/in/yeow-song-jie-3140a5217/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
-3	public/img/testimonial/jefferson.jpeg	Jefferson	Modern Workspace Developer	SRKK	Fast learner and an excellent developer.	https://www.linkedin.com/in/jefferson-mendoza-030b63bb/	2025-04-29 16:20:25.727125	2025-04-29 16:20:25.727125
-\.
+INSERT INTO public.testimonials VALUES (1, 'public/img/testimonial/teantze.jpeg', 'Tean Tze', 'Application Developer', 'Assurance Technology', 'Responsible and friendly senior, outstanding projects partner.', 'https://www.linkedin.com/in/tean-tze-ng-6767bb224/', '2025-04-29 16:20:25.727125', '2025-04-29 16:20:25.727125');
+INSERT INTO public.testimonials VALUES (2, 'public/img/testimonial/songjie.jpeg', 'Song Jie', 'Application Consultant', 'Infinergy System', 'A leader who actually care about his teammates.', 'https://www.linkedin.com/in/yeow-song-jie-3140a5217/', '2025-04-29 16:20:25.727125', '2025-04-29 16:20:25.727125');
+INSERT INTO public.testimonials VALUES (3, 'public/img/testimonial/jefferson.jpeg', 'Jefferson', 'Modern Workspace Developer', 'SRKK', 'Fast learner and an excellent developer.', 'https://www.linkedin.com/in/jefferson-mendoza-030b63bb/', '2025-04-29 16:20:25.727125', '2025-04-29 16:20:25.727125');
 
 
 --
@@ -853,7 +833,7 @@ ALTER TABLE ONLY public.portfolio_images
     ADD CONSTRAINT portfolio_images_portfolio_id_fkey FOREIGN KEY (portfolio_id) REFERENCES public.portfolios(portfolio_id) ON DELETE CASCADE;
 
 
--- Completed on 2025-04-29 18:33:17 +08
+-- Completed on 2025-04-30 00:27:52 +08
 
 --
 -- PostgreSQL database dump complete
