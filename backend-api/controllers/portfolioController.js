@@ -6,12 +6,33 @@ import {
   deletePortfolioById,
 } from "../query/portfolioQuery.js";
 
+import { formatDate } from "../utils/formatDate.js";
+
 // Get all portfolios
 export const getAllPortfolio = async (req, res, next) => {
   try {
     const portfolios = await getAllPortfolios();
-    res.json(portfolios);
+
+    const formattedPortfolios = portfolios.map((item) => ({
+      title: item.title,
+      date: formatDate(item.date), // Custom date formatting
+      category: item.category,
+      cover_image: item.cover_image,
+      description: item.description,
+    }));
+
+    // res.json(formattedPortfolios);
+    res.json({
+      status: "success",
+      message: "Portfolios fetched successfully",
+      data: formattedPortfolios,
+    });
   } catch (err) {
+    res.status(500).json({
+      status: "error",
+      message: "Failed to fetch portfolios",
+      error: err.message,
+    });
     next(err);
   }
 };

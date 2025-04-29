@@ -33,3 +33,17 @@
 #contact a {
   color: #000;
 }
+
+.icon-contact-wrapper:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff !important;
+}
+
+.icon-contact-wrapper:hover a {
+  color: #fff !important;
+}
+
+.icon-small-info {
+  margin-right: 10px;
+}
