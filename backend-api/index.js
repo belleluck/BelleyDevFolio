@@ -20,7 +20,7 @@ const app = express();
 // app.use(cors());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://belley-devfolio.vercel.app", "https://belleydevfolio.onrender.com"],
+    origin: ["http://localhost:3002", "https://belley-devfolio.vercel.app"],
     credentials: true,
   })
 );
